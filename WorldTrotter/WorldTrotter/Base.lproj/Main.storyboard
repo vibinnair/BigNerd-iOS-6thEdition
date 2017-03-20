@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Conversion View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ConversionViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -33,12 +33,6 @@
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="212" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O6-iZ-0HR">
-                                <rect key="frame" x="132" y="28" width="111" height="84"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celsius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNO-Pn-uL6">
                                 <rect key="frame" x="61" y="314" width="254" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -51,21 +45,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="093-gx-XTI">
+                                <rect key="frame" x="63" y="28" width="250" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="01n-To-8cT"/>
+                                </constraints>
+                                <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="fahrenheitFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="XRD-pY-Kd5"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2O6-iZ-0HR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4lD-Fr-uHv"/>
-                            <constraint firstItem="2O6-iZ-0HR" firstAttribute="centerX" secondItem="J6u-7h-SdT" secondAttribute="centerX" id="61S-AV-TG5"/>
+                            <constraint firstItem="093-gx-XTI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="3qq-lF-x6O"/>
                             <constraint firstItem="mDG-fC-G3s" firstAttribute="centerX" secondItem="J6u-7h-SdT" secondAttribute="centerX" id="7dy-gJ-Yog"/>
+                            <constraint firstItem="J6u-7h-SdT" firstAttribute="top" secondItem="093-gx-XTI" secondAttribute="bottom" constant="8" id="BPb-km-Y9F"/>
                             <constraint firstItem="iNO-Pn-uL6" firstAttribute="centerX" secondItem="J6u-7h-SdT" secondAttribute="centerX" id="LLO-nS-OI6"/>
                             <constraint firstItem="iNO-Pn-uL6" firstAttribute="top" secondItem="tFH-MT-x5I" secondAttribute="bottom" constant="8" id="NfY-oy-fEr"/>
-                            <constraint firstItem="2O6-iZ-0HR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="VkP-v6-9Ix"/>
                             <constraint firstItem="tFH-MT-x5I" firstAttribute="centerX" secondItem="J6u-7h-SdT" secondAttribute="centerX" id="WuE-0s-WCj"/>
-                            <constraint firstItem="J6u-7h-SdT" firstAttribute="top" secondItem="2O6-iZ-0HR" secondAttribute="bottom" constant="8" id="j2y-6X-0ZX"/>
+                            <constraint firstItem="093-gx-XTI" firstAttribute="centerX" secondItem="J6u-7h-SdT" secondAttribute="centerX" id="ezc-Q0-zrh"/>
                             <constraint firstItem="mDG-fC-G3s" firstAttribute="top" secondItem="J6u-7h-SdT" secondAttribute="bottom" constant="8" id="l6J-bT-tji"/>
                             <constraint firstItem="tFH-MT-x5I" firstAttribute="top" secondItem="mDG-fC-G3s" secondAttribute="bottom" constant="8" id="lrD-hO-FSI"/>
+                            <constraint firstItem="093-gx-XTI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s6W-HO-EDQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="tFH-MT-x5I" id="oZZ-bN-A1q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
