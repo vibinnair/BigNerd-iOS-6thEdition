@@ -1,14 +1,6 @@
-//
-//  ConversionViewController.swift
-//  WorldTrotter
-//
-//  Created by Vibin Nair on 20/03/17.
-//  Copyright © 2017 VibinBigNerd. All rights reserved.
-//
-
 import UIKit
 
-class ConversionViewController: UIViewController {
+class ConversionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
     
@@ -59,5 +51,17 @@ class ConversionViewController: UIViewController {
         } else {
             self.celsiusLabel.text = "???"
         }
+    }
+    
+    
+    // UITextFieldDelegate
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+       
+        let existingTextHasDecimalSeperator = textField.text?.range(of: ".")
+        let replacementTextHasDecimalSeperator = string.range(of: ".")
+        if existingTextHasDecimalSeperator != nil, replacementTextHasDecimalSeperator != nil {
+            return false
+        }
+        return true
     }
 }
