@@ -40,5 +40,22 @@ class MapViewController: UIViewController {
         topConstraint.isActive = true
         leadingConstraint.isActive = true
         trailingConstraint.isActive = true
+        
+        // Add a target-action pair between the segmented control and the controller, associate it with 
+        // .valueChanged event
+        segmentedControl.addTarget(self, action: #selector(MapViewController.mapTypeChanged(_:)), for: .valueChanged)
+    }
+    
+    func mapTypeChanged(_ segmentedControl: UISegmentedControl) {
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            self.mapView.mapType = .standard
+        case 1:
+            self.mapView.mapType = .hybrid
+        case 2:
+            self.mapView.mapType = .satellite
+        default:
+            break
+        }
     }
 }
