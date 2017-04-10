@@ -100,7 +100,7 @@
         <!--Map-->
         <scene sceneID="FUB-tm-AZh">
             <objects>
-                <viewController id="wBL-OR-6sc" sceneMemberID="viewController">
+                <viewController id="wBL-OR-6sc" customClass="MapViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
                     <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="WxM-XX-hoC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -109,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="npb-Nh-46d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2406" y="301"/>
+            <point key="canvasLocation" x="1932" y="302"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VQV-Ga-rpa">
@@ -117,6 +117,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="O06-Wf-irB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="py9-2A-zsi">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
